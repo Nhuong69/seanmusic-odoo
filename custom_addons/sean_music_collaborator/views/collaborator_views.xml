@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_collaborator_list" model="ir.ui.view">
+        <field name="name">sean.music.collaborator.list</field>
+        <field name="model">sean.music.collaborator</field>
+        <field name="arch" type="xml">
+            <list string="Collaborators">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="user_id" optional="show"/>
+                <field name="plan_id"/>
+                <field name="sale_count" string="Confirmed Sales"/>
+                <field name="commission_total" widget="monetary"/>
+                <field name="currency_id" column_invisible="True"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_collaborator_form" model="ir.ui.view">
+        <field name="name">sean.music.collaborator.form</field>
+        <field name="model">sean.music.collaborator</field>
+        <field name="arch" type="xml">
+            <form string="Collaborator">
+                <header>
+                    <button name="action_view_sales" type="object" string="Sales" class="oe_highlight"/>
+                    <button name="action_view_commissions" type="object" string="Commissions"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_sales" type="object" class="oe_stat_button" icon="fa-shopping-cart">
+                            <field name="sale_count" widget="statinfo" string="Sales"/>
+                        </button>
+                        <button name="action_view_commissions" type="object" class="oe_stat_button" icon="fa-money">
+                            <field name="commission_total" widget="statinfo" string="Commission"/>
+                        </button>
+                    </div>
+                    <div class="oe_title"><h1><field name="partner_id" placeholder="Select a contact"/></h1></div>
+                    <group>
+                        <field name="plan_id"/>
+                        <field name="user_id"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="active" widget="boolean_toggle"/>
+                        <field name="currency_id" invisible="True"/>
+                    </group>
+                    <notebook>
+                        <page string="Sales">
+                            <field name="sale_order_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="date_order"/>
+                                    <field name="partner_id"/>
+                                    <field name="amount_total"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Commissions">
+                            <field name="commission_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="sale_order_id"/>
+                                    <field name="date"/>
+                                    <field name="base_amount"/>
+                                    <field name="commission_amount"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_collaborator" model="ir.actions.act_window">
+        <field name="name">Collaborators</field>
+        <field name="res_model">sean.music.collaborator</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,17 @@
+; Copy via: .venv/bin/python scripts/dev/init_local_config.py
+; Replace paths with the current checkout; never commit real passwords.
+[options]
+admin_passwd = CHANGE_ME
+db_host = localhost
+db_port = 5432
+db_user = YOUR_POSTGRES_ROLE
+db_name = db_seanmusic
+dbfilter = ^db_seanmusic$
+addons_path = /ABSOLUTE/PATH/sean_music/custom_addons,/ABSOLUTE/PATH/sean_music/odoo/addons,/ABSOLUTE/PATH/sean_music/odoo/odoo/addons
+data_dir = /ABSOLUTE/PATH/sean_music/.odoo-data
+http_interface = 127.0.0.1
+http_port = 8079
+workers = 0
+max_cron_threads = 0
+log_level = info
+list_db = False

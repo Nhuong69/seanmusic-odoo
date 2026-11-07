@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sean_music_login_layout" inherit_id="web.login_layout" name="Sean Music Login Layout">
+        <xpath expr="//div[hasclass('container') and hasclass('py-5')]" position="replace">
+            <main class="sean_music_login_shell">
+                <div class="sean_music_login_glow sean_music_login_glow_one"/>
+                <div class="sean_music_login_glow sean_music_login_glow_two"/>
+                <div class="sean_music_login_brand_panel">
+                    <div class="sean_music_login_mark">SM</div>
+                    <div class="sean_music_login_brand">SEAN MUSIC</div>
+                    <p>Âm nhạc, sản phẩm và cộng tác viên<br/>trong một không gian quản lý.</p>
+                    <div class="sean_music_login_wave" aria-hidden="true">
+                        <span/><span/><span/><span/><span/><span/><span/><span/><span/>
+                    </div>
+                </div>
+                <section class="sean_music_login_card o_database_list">
+                    <div class="sean_music_login_card_header">
+                        <span class="sean_music_login_kicker">WORKSPACE</span>
+                        <h1>Chào mừng trở lại</h1>
+                        <p>Đăng nhập để tiếp tục quản lý Sean Music.</p>
+                    </div>
+                    <t t-out="0"/>
+                    <div class="sean_music_login_footer" t-if="not disable_footer">
+                        <a t-if="not disable_database_manager" href="/web/database/manager">Quản lý database</a>
+                        <span t-if="not disable_database_manager">•</span>
+                        <span>Sean Music ERP</span>
+                    </div>
+                </section>
+            </main>
+        </xpath>
+    </template>
+
+    <template id="sean_music_login_form" inherit_id="web.login" name="Sean Music Login Form">
+        <xpath expr="//label[@for='login']" position="replace">
+            <label for="login" class="form-label">Tài khoản</label>
+        </xpath>
+        <xpath expr="//input[@id='login']" position="attributes">
+            <attribute name="placeholder">Nhập tài khoản của bạn</attribute>
+        </xpath>
+        <xpath expr="//label[@for='password']" position="replace">
+            <label for="password" class="form-label">Mật khẩu</label>
+        </xpath>
+        <xpath expr="//input[@id='password']" position="attributes">
+            <attribute name="placeholder">Nhập mật khẩu</attribute>
+        </xpath>
+        <xpath expr="//button[@type='submit']" position="replace">
+            <button type="submit" class="btn sean_music_login_button">Đăng nhập <span>→</span></button>
+        </xpath>
+    </template>
+
+    <template id="sean_music_website_login_layout" inherit_id="website.login_layout" priority="99" name="Sean Music Website Login Layout">
+        <xpath expr="//div[hasclass('oe_website_login_container')]" position="replace">
+            <main class="sean_music_login_shell">
+                <div class="sean_music_login_glow sean_music_login_glow_one"/>
+                <div class="sean_music_login_glow sean_music_login_glow_two"/>
+                <div class="sean_music_login_brand_panel">
+                    <div class="sean_music_login_mark">SM</div>
+                    <div class="sean_music_login_brand">SEAN MUSIC</div>
+                    <p>Âm nhạc, sản phẩm và cộng tác viên<br/>trong một không gian quản lý.</p>
+                    <div class="sean_music_login_wave" aria-hidden="true">
+                        <span/><span/><span/><span/><span/><span/><span/><span/><span/>
+                    </div>
+                </div>
+                <section class="sean_music_login_card o_database_list">
+                    <div class="sean_music_login_card_header">
+                        <span class="sean_music_login_kicker">WORKSPACE</span>
+                        <h1>Chào mừng trở lại</h1>
+                        <p>Đăng nhập để tiếp tục quản lý Sean Music.</p>
+                    </div>
+                    <t t-out="0"/>
+                    <div class="sean_music_login_footer" t-if="not disable_footer">
+                        <a t-if="not disable_database_manager" href="/web/database/manager">Quản lý database</a>
+                        <span t-if="not disable_database_manager">•</span>
+                        <span>Sean Music ERP</span>
+                    </div>
+                </section>
+            </main>
+        </xpath>
+    </template>
+</odoo>

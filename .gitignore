@@ -1,0 +1,24 @@
+# Local credentials and machine-specific configuration
+/odoo.conf
+/seanmusic.conf
+/.env
+/.env.*
+!/.env.example
+/config/*.local.conf
+/.idea/
+/.venv/
+/.odoo-data/
+/backups/
+/artifacts/
+*.log
+*.dump
+*.sql
+*.zip
+__pycache__/
+*.py[cod]
+.DS_Store
+node_modules/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/

@@ -1,0 +1,7 @@
+{
+  "name": "seanmusic-user-guide-tools",
+  "private": true,
+  "description": "Optional document generator, independent of the Odoo runtime",
+  "scripts": {"build": "node create_user_guide.js"},
+  "dependencies": {"docx": "9.5.1", "sharp": "0.34.5"}
+}

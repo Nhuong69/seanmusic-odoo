@@ -1,0 +1,11 @@
+id,name,model_id,group_id/id,operation,domain
+access_collaborator_user,collaborator user,sean.music.collaborator,sean_music_collaborator.group_collaborator_user,crud,
+access_collaborator_manager,collaborator manager,sean.music.collaborator,sean_music_collaborator.group_collaborator_manager,crud,
+access_commission_plan_user,commission plan user,sean.music.commission.plan,sean_music_collaborator.group_collaborator_user,r,
+access_commission_plan_manager,commission plan manager,sean.music.commission.plan,sean_music_collaborator.group_collaborator_manager,crud,
+access_commission_rule_user,commission rule user,sean.music.commission.rule,sean_music_collaborator.group_collaborator_user,r,
+access_commission_rule_manager,commission rule manager,sean.music.commission.rule,sean_music_collaborator.group_collaborator_manager,crud,
+access_commission_user,commission user,sean.music.commission,sean_music_collaborator.group_collaborator_user,ru,
+access_commission_manager,commission manager,sean.music.commission,sean_music_collaborator.group_collaborator_manager,crud,
+access_commission_line_user,commission line user,sean.music.commission.line,sean_music_collaborator.group_collaborator_user,r,
+access_commission_line_manager,commission line manager,sean.music.commission.line,sean_music_collaborator.group_collaborator_manager,crud,

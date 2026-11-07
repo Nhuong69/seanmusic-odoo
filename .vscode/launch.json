@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo 20 - db_seanmusic",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/odoo/odoo-bin",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "args": ["-c", "${workspaceFolder}/seanmusic.conf"],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/odoo"
+            }
+        },
+        {
+            "name": "Odoo 20 - install modules (fresh local DB only)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/odoo/odoo-bin",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "args": ["-c", "${workspaceFolder}/seanmusic.conf", "-i", "sean_music_store,sean_music_collaborator", "--without-demo", "--stop-after-init", "--no-http"],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/odoo"
+            }
+        }
+    ]
+}

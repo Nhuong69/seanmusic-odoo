@@ -1,0 +1,5 @@
+-r requirements.txt
+# Optional VS Code debugger; PyCharm supplies its own debugger.
+debugpy>=1.8,<2
+# Validation of project-local skill metadata.
+PyYAML>=6,<7

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Contact details below belong only to the current website's company;
+         the public page never accepts a partner or company identifier. -->
+    <template id="contact_form" inherit_id="sean_music_store.lien_he" name="Sean Music - Biểu mẫu tư vấn">
+        <xpath expr="//div[hasclass('o_sean_music_store_guide_grid')]" position="before">
+            <div t-if="request.params.get('da_gui') == '1'" class="alert alert-success" role="status"><strong>Sean Music đã nhận yêu cầu của bạn.</strong><br/>Thông tin đã được lưu để cửa hàng tiếp nhận và phản hồi qua kênh liên hệ bạn cung cấp.</div>
+            <form t-else="" action="/lien-he/gui" method="post" class="o_sean_music_store_contact_form">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <div class="d-none" aria-hidden="true"><label for="inquiry_website">Để trống ô này</label><input id="inquiry_website" name="website_url" tabindex="-1" autocomplete="off"/></div>
+                <div><span class="o_sean_music_store_kicker">GỬI NHU CẦU CỦA BẠN</span><h2>Cùng tìm một nhạc cụ phù hợp.</h2><p>Yêu cầu được gửi đến bộ phận tư vấn của Sean Music. Hãy để lại ít nhất một kênh liên hệ để cửa hàng phản hồi.</p></div>
+                <div class="o_sean_music_store_contact_fields">
+                    <p t-if="form_error" class="alert alert-danger" role="alert" t-out="form_error"/>
+                    <div><label for="inquiry_name">Họ và tên <span>*</span></label><input id="inquiry_name" name="name" required="required" minlength="2" maxlength="150" autocomplete="name" placeholder="Tên của bạn" t-att-value="(form_values or {}).get('name', '')"/></div>
+                    <div class="o_sean_music_store_contact_row"><div><label for="inquiry_email">Email</label><input type="email" id="inquiry_email" name="email" maxlength="254" autocomplete="email" placeholder="ban@example.com" t-att-value="(form_values or {}).get('email', '')"/></div><div><label for="inquiry_phone">Số điện thoại</label><input type="tel" id="inquiry_phone" name="phone" maxlength="30" autocomplete="tel" placeholder="Số điện thoại của bạn" t-att-value="(form_values or {}).get('phone', '')"/></div></div>
+                    <div><label for="inquiry_message">Bạn đang tìm nhạc cụ nào? <span>*</span></label><textarea id="inquiry_message" name="message" rows="4" required="required" minlength="10" maxlength="5000" placeholder="Tên nhạc cụ, thể loại bạn chơi, ngân sách và điều bạn muốn hỏi..." t-out="(form_values or {}).get('message', '')"/></div>
+                    <p class="o_sean_music_store_contact_privacy">Thông tin bạn cung cấp chỉ phục vụ việc tiếp nhận và xử lý yêu cầu tư vấn này.</p>
+                    <button type="submit" class="o_sean_music_store_button_dark">Gửi yêu cầu tư vấn <span>↗</span></button>
+                </div>
+            </form>
+        </xpath>
+    </template>
+    <record id="inquiry_view_list" model="ir.ui.view"><field name="name">sean.music.inquiry.view.list</field><field name="model">sean.music.inquiry</field><field name="arch" type="xml"><list decoration-muted="state == 'done'"><field name="create_date"/><field name="name"/><field name="email"/><field name="phone"/><field name="state" widget="badge"/></list></field></record>
+    <record id="inquiry_view_form" model="ir.ui.view"><field name="name">sean.music.inquiry.view.form</field><field name="model">sean.music.inquiry</field><field name="arch" type="xml"><form><sheet><group><field name="name"/><field name="email"/><field name="phone"/><field name="state"/><field name="website_id"/><field name="company_id" groups="base.group_multi_company"/></group><field name="message"/></sheet></form></field></record>
+    <record id="inquiry_action" model="ir.actions.act_window"><field name="name">Yêu cầu tư vấn Sean Music</field><field name="res_model">sean.music.inquiry</field><field name="view_mode">list,form</field></record>
+    <menuitem id="inquiry_menu" name="Tư vấn Sean Music" parent="website.menu_website_configuration" action="inquiry_action" sequence="35" groups="website.group_website_designer,sales_team.group_sale_salesman"/>
+</odoo>

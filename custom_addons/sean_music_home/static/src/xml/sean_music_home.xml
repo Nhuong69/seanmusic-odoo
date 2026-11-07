@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sean_music_home.Home">
+        <div class="sean_music_home h-100 overflow-auto">
+            <div class="sean_music_home_ribbon">SEAN MUSIC</div>
+            <div class="sean_music_home_inner">
+                <div class="sean_music_home_heading">
+                    <div>
+                        <div class="sean_music_home_eyebrow">WORKSPACE / HOME</div>
+                        <h1>Không gian làm việc</h1>
+                        <p>Chọn một ứng dụng để bắt đầu công việc hôm nay.</p>
+                    </div>
+                    <div class="sean_music_home_search">
+                        <i class="oi" data-icon="search" aria-hidden="true"/>
+                        <input type="search" placeholder="Tìm ứng dụng..." t-on-input="updateSearch"/>
+                    </div>
+                </div>
+                <div class="sean_music_home_grid" role="listbox">
+                    <button t-foreach="this.displayedApps" t-as="app" t-key="app.key" class="sean_music_app" type="button" role="option" t-on-click="() => this.openMenu(app.menu)">
+                        <span class="sean_music_app_icon" t-att-style="`--tile-color: ${app.webIconBg || '#315da4'}`">
+                            <img t-if="app.webIconData" class="sean_music_app_icon_image" t-att-src="app.webIconData" t-att-alt="app.label"/>
+                            <i t-else="" class="oi" t-att-data-icon="app.webIconClass" t-att-style="`color: ${app.webIconColor || '#fff'}`" aria-hidden="true"/>
+                        </span>
+                        <span class="sean_music_app_label" t-esc="app.label"/>
+                    </button>
+                </div>
+                <div t-if="!this.displayedApps.length" class="sean_music_home_empty">Không tìm thấy ứng dụng phù hợp.</div>
+                <footer class="sean_music_home_footer">
+                    <span>Sean Music ERP</span>
+                    <span>Quản lý bán hàng • Sản phẩm • Cộng tác viên</span>
+                </footer>
+            </div>
+        </div>
+    </t>
+
+</templates>

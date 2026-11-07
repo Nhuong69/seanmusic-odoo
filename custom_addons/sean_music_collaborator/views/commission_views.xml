@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commission_list" model="ir.ui.view">
+        <field name="name">sean.music.commission.list</field>
+        <field name="model">sean.music.commission</field>
+        <field name="arch" type="xml">
+            <list string="Commissions">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="collaborator_id"/>
+                <field name="sale_order_id"/>
+                <field name="customer_id"/>
+                <field name="base_amount" sum="Total Sales Base"/>
+                <field name="commission_amount" sum="Total Commission"/>
+                <field name="state" widget="badge"/>
+                <field name="currency_id" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_commission_form" model="ir.ui.view">
+        <field name="name">sean.music.commission.form</field>
+        <field name="model">sean.music.commission</field>
+        <field name="arch" type="xml">
+            <form string="Commission">
+                <header>
+                    <button name="action_mark_paid" type="object" string="Mark Paid" class="oe_highlight" invisible="state != 'confirmed'"/>
+                    <button name="action_mark_confirmed" type="object" string="Reopen" invisible="state != 'paid'"/>
+                    <button name="action_cancel" type="object" string="Cancel" invisible="state == 'cancelled'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="confirmed,paid"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="collaborator_id"/>
+                            <field name="sale_order_id"/>
+                            <field name="customer_id"/>
+                            <field name="plan_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="base_amount"/>
+                            <field name="commission_amount"/>
+                            <field name="currency_id" invisible="True"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products Sold">
+                            <field name="line_ids" readonly="1">
+                                <list>
+                                    <field name="product_id"/>
+                                    <field name="quantity"/>
+                                    <field name="base_amount"/>
+                                    <field name="rate" widget="percentage"/>
+                                    <field name="amount"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_commission_pivot" model="ir.ui.view">
+        <field name="name">sean.music.commission.pivot</field>
+        <field name="model">sean.music.commission.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Commission Analysis">
+                <field name="collaborator_id" type="row"/>
+                <field name="product_id" type="row"/>
+                <field name="base_amount" type="measure"/>
+                <field name="amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_commission_line_list" model="ir.ui.view">
+        <field name="name">sean.music.commission.line.list</field>
+        <field name="model">sean.music.commission.line</field>
+        <field name="arch" type="xml">
+            <list string="Commission Product Details">
+                <field name="collaborator_id"/>
+                <field name="sale_order_id"/>
+                <field name="product_id"/>
+                <field name="quantity" sum="Total Quantity"/>
+                <field name="base_amount" sum="Total Sales Base"/>
+                <field name="rate" widget="percentage"/>
+                <field name="amount" sum="Total Commission"/>
+                <field name="currency_id" column_invisible="True"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_commission" model="ir.actions.act_window">
+        <field name="name">Commissions</field>
+        <field name="res_model">sean.music.commission</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_commission_analysis" model="ir.actions.act_window">
+        <field name="name">Commission Analysis</field>
+        <field name="res_model">sean.music.commission.line</field>
+        <field name="view_mode">pivot,list</field>
+    </record>
+</odoo>

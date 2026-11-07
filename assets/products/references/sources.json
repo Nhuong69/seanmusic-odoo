@@ -1,0 +1,107 @@
+{
+  "GUITAR-NS2NA": {
+    "page": "https://www.tanglewoodguitars.co.uk/product/ns2na/",
+    "url": "https://www.tanglewoodguitars.co.uk/wp-content/uploads/2025/09/NS2NA-scaled.jpg",
+    "file": "assets/products/references/guitar-ns2na.jpg"
+  },
+  "GUITAR-NS1MC": {
+    "page": "https://www.tanglewoodguitars.co.uk/product/ns1mc/",
+    "url": "https://www.tanglewoodguitars.co.uk/wp-content/uploads/2026/03/NS1MC-scaled.jpg",
+    "file": "assets/products/references/guitar-ns1mc.jpg"
+  },
+  "GUITAR-NS1BL": {
+    "page": "https://www.tanglewoodguitars.co.uk/product/ns1bl/",
+    "url": "https://www.tanglewoodguitars.co.uk/wp-content/uploads/2026/08/NS1BL-scaled.jpg",
+    "file": "assets/products/references/guitar-ns1bl.jpg"
+  },
+  "GUITAR-DONNER-HUSHC": {
+    "page": "https://us.donnermusic.com/products/donner-hush-c-guitar",
+    "url": "http://us.donnermusic.com/cdn/shop/files/HUSHC.jpg?v=1746757349&width=2048",
+    "file": "assets/products/references/guitar-donner-hushc.jpg"
+  },
+  "GUITAR-DONNER-HUSHIPRO": {
+    "page": "https://us.donnermusic.com/products/donner-hush-i-pro-acoustic-electric-travel-guitar-kit",
+    "url": "http://us.donnermusic.com/cdn/shop/files/HUSHIPRO_7.jpg?v=1763367370&width=2048",
+    "file": "assets/products/references/guitar-donner-hushipro.jpg"
+  },
+  "GUITAR-DONNER-HUSHXPRO": {
+    "page": "https://uk.donnermusic.com/products/donner-hush-x-pro-guitar",
+    "url": "http://uk.donnermusic.com/cdn/shop/files/HUSHXPRO_437bc590-62b8-4bdc-9a11-84de39fe5333_6.jpg?v=1762239356&width=2048",
+    "file": "assets/products/references/guitar-donner-hushxpro.jpg"
+  },
+  "AMP-BLACKSTAR-FLY3": {
+    "page": "https://store.vietthuong.vn/products/blackstar-fly-3-bluetooth",
+    "url": "http://cdn.hstatic.net/products/200000423875/80_93mini-guitar-amp-with-bluetooth-1_3e6f43beb172433e842eff14587ef4d2_cb8131f13c6a4384a48bbb01fac7edf2_grande.jpg",
+    "file": "assets/products/references/amp-blackstar-fly3.jpg"
+  },
+  "AMP-FENDER-LT25": {
+    "page": "https://store.vietthuong.vn/products/fender-combo-ampli-die-n-mustang-lt25-230v-25w-2311106000",
+    "url": "http://cdn.hstatic.net/products/200000423875/mustang_lt25_230v_a6b726e308f34ac1a3888976715a7cd1_grande.jpg",
+    "file": "assets/products/references/amp-fender-lt25.jpg"
+  },
+  "DRUM-ALESIS-TURBO": {
+    "page": "https://store.vietthuong.vn/products/alesis-turbo-mesh-kit",
+    "url": "http://product.hstatic.net/200000423875/product/alesis-turbo-mesh-kit-01_12aef62f9e5644eaac3dd2efcea5303f_grande.jpg",
+    "file": "assets/products/references/drum-alesis-turbo.jpg"
+  },
+  "GUITAR-FENDER-PLAYER2": {
+    "page": "https://store.vietthuong.vn/products/fender-dan-guitar-dien-player-ii-strat-hss-rw-3ts-0140540500",
+    "url": "http://product.hstatic.net/200000423875/product/0140540500-1-2048x2048_306a66a87e664af68d56c010cc0eae87_grande.png",
+    "file": "assets/products/references/guitar-fender-player2.png"
+  },
+  "AMP-BLACKSTAR-BA102019": {
+    "page": "https://store.vietthuong.vn/products/blackstar-fly3-bass",
+    "url": "http://product.hstatic.net/200000423875/product/blackstar-fly3-bass-1_4537a3eddb9a4a7dbc796d4cb68881c9_grande.jpg",
+    "file": "assets/products/references/amp-blackstar-ba102019.jpg"
+  },
+  "AMP-BS-AMPLUG2": {
+    "page": "https://store.vietthuong.vn/products/blackstar-amplug2-fly-guitar",
+    "url": "http://product.hstatic.net/200000423875/product/blackstar-amplug2-fly-guitar_ba1e63f79e324e7b8206322bf794ff3c_grande.jpg",
+    "file": "assets/products/references/amp-bs-amplug2.jpg"
+  },
+  "AMP-BS-DEBUT10E": {
+    "page": "https://store.vietthuong.vn/products/blackstar-debut-10e",
+    "url": "http://product.hstatic.net/200000423875/product/blackstar-debut-10e_8c208e6c8b78438d9d30130de701253d_grande.jpg",
+    "file": "assets/products/references/amp-bs-debut10e.jpg"
+  },
+  "AMP-BS-DEBUT15E": {
+    "page": "https://store.vietthuong.vn/products/blackstar-debut-15e",
+    "url": "http://product.hstatic.net/200000423875/product/blackstar-debut-15e_8721bd532ede48deb69d4685f129ba0d_grande.jpg",
+    "file": "assets/products/references/amp-bs-debut15e.jpg"
+  },
+  "AMP-ROLAND-CUBE10GX": {
+    "page": "https://store.vietthuong.vn/products/roland-cube-10gx",
+    "url": "http://cdn.hstatic.net/products/200000423875/roland-cube-10gx-11_848dd757699d4e069d04fc1ed225d072_673ed40f39a342edbd93c04d5aaf3158_grande.jpg",
+    "file": "assets/products/references/amp-roland-cube10gx.jpg"
+  },
+  "AMP-DONNER-DA10B": {
+    "page": "https://store.vietthuong.vn/products/donner-amply-guitar-dien-da-10b-vintage-white",
+    "url": "http://cdn.hstatic.net/products/200000423875/donner_amp_da-10b_vintage_white_3240fdeef065482c8a62bfaeed81885c_grande.jpg",
+    "file": "assets/products/references/amp-donner-da10b.jpg"
+  },
+  "AMP-FISHMAN-LBMINI": {
+    "page": "https://vietmusic.vn/products/amplifier-fishman-loudbox-mini",
+    "url": "https://vietmusic.vn/cdn/shop/files/amplifier-fishman-loudbox-mini-bluetooth-combo-viet-music.jpg?v=1689725777",
+    "file": "assets/products/references/amp-fishman-lbmini.jpg"
+  },
+  "DRUM-ALESIS-DEBUT": {
+    "page": "https://store.vietthuong.vn/products/alesis-debut-kit-bo-trong-dien-tu",
+    "url": "http://cdn.hstatic.net/products/200000423875/alesis_debut_kit_a108ad6caa8c421897d77964cd8e3720_grande.jpg",
+    "file": "assets/products/references/drum-alesis-debut.jpg"
+  },
+  "DRUM-ALESIS-SURGESE": {
+    "page": "https://store.vietthuong.vn/products/alesis-surge-se-kit-bo-trong-dien-tu",
+    "url": "http://product.hstatic.net/200000423875/product/surgemeshkit_84a501e332324cde8e31b331e047bbe4_grande.jpg",
+    "file": "assets/products/references/drum-alesis-surgese.jpg"
+  },
+  "DRUM-ROLAND-TD02KV": {
+    "page": "https://store.vietthuong.vn/products/roland-td-02kv-bo-trong-dien-tu",
+    "url": "http://cdn.hstatic.net/products/200000423875/roland_td-02kv-2_13e80c8a05144d07b0822e835d50283a_grande.jpg",
+    "file": "assets/products/references/drum-roland-td02kv.jpg"
+  },
+  "GUITAR-DONNER-DST100": {
+    "page": "https://store.vietthuong.vn/products/dan-guitar-dien-donner-dst-100-kem-am-ly-phu-kien",
+    "url": "http://cdn.hstatic.net/products/200000423875/ec1098_641ef3520c7a42a19cfca41dc8a14934_grande.jpg",
+    "file": "assets/products/references/guitar-donner-dst100.jpg"
+  }
+}

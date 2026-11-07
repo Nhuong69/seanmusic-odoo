@@ -1,0 +1,2 @@
+# The Odoo submodule commit pins these upstream dependency declarations.
+-r odoo/requirements.txt

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_sean_music_home" model="ir.actions.client">
+        <field name="name">Sean Music Home</field>
+        <field name="tag">sean_music_home</field>
+    </record>
+</odoo>

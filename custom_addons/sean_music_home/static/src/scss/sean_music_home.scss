@@ -1,0 +1,267 @@
+.o_web_client {
+    --sean-navy: #062755;
+    --sean-blue: #194c91;
+    --sean-blue-light: #315da4;
+    --sean-orange: #f08b4f;
+    --sean-orange-dark: #d96d32;
+    --sean-teal: #269c9a;
+    --sean-lilac: #7b6ca8;
+
+    .o_main_navbar {
+        --o-navbar-background: var(--sean-navy);
+        --NavBar-entry-backgroundColor: transparent;
+        --NavBar-entry-backgroundColor--hover: rgba(49, 93, 164, .8);
+        --NavBar-entry-backgroundColor--focus: rgba(49, 93, 164, .9);
+        --NavBar-entry-backgroundColor--active: var(--sean-orange);
+        --NavBar-entry-color: #fff;
+        --NavBar-entry-color--active: #fff;
+        --NavBar-brand-color: #fff;
+        background: var(--sean-navy) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, .14);
+
+        .o_menu_sections .o_nav_entry,
+        .o_menu_sections .dropdown-toggle:not(:disabled, .o-dropdown-toggle-custo) {
+            border-radius: 8px;
+            margin: 0 2px;
+        }
+
+        .o_menu_sections .dropdown.show.dropdown-toggle:not(.o-dropdown-toggle-custo) {
+            background: var(--sean-orange);
+        }
+    }
+
+    .o_action_manager {
+        background: #f4f7fb;
+    }
+
+    .o_control_panel {
+        border-bottom-color: #dce5f1;
+
+        .btn-primary,
+        .o_list_button_add,
+        .o-kanban-button-new {
+            background-color: var(--sean-orange);
+            border-color: var(--sean-orange);
+
+            &:hover, &:focus, &:active {
+                background-color: var(--sean-orange-dark);
+                border-color: var(--sean-orange-dark);
+            }
+        }
+
+        .o_searchview_facet_label,
+        .o_searchview_facet_label.btn-primary {
+            background-color: var(--sean-blue-light);
+            border-color: var(--sean-blue-light);
+        }
+    }
+
+    .btn-primary {
+        background-color: var(--sean-orange);
+        border-color: var(--sean-orange);
+
+        &:hover, &:focus, &:active {
+            background-color: var(--sean-orange-dark);
+            border-color: var(--sean-orange-dark);
+        }
+    }
+
+    .nav-link.active,
+    .nav-pills .nav-link.active,
+    .o_notebook .nav-link.active {
+        background-color: var(--sean-blue-light);
+    }
+
+    .form-control:focus,
+    .form-select:focus,
+    .o_input:focus {
+        border-color: var(--sean-blue-light);
+        box-shadow: 0 0 0 .2rem rgba(49, 93, 164, .18);
+    }
+
+    .o_list_view .o_list_table thead th {
+        color: var(--sean-navy);
+    }
+
+    .o_kanban_record:hover,
+    .o_list_table tbody tr:hover {
+        background-color: #eef4fb;
+    }
+}
+
+.sean_music_home_active {
+    .o_main_navbar {
+        background: #062755 !important;
+    }
+
+    .o_action_manager {
+        background: #194c91;
+    }
+}
+
+.sean_music_home {
+    position: relative;
+    min-height: 100%;
+    color: #fff;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 14%, rgba(57, 151, 255, .34), transparent 27rem),
+        linear-gradient(135deg, #0c3a7e 0%, #2764ae 53%, #668bc5 100%);
+}
+
+.sean_music_home_ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 44px 10px 24px;
+    transform: translate(-23px, 15px) rotate(-45deg);
+    background: #d53657;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.sean_music_home_inner {
+    width: 92%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 0 34px;
+}
+
+.sean_music_home_heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 42px;
+}
+
+.sean_music_home_eyebrow {
+    color: #b7d7ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.sean_music_home_heading h1 {
+    margin: 8px 0 4px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.sean_music_home_heading p {
+    margin: 0;
+    color: rgba(255, 255, 255, .74);
+}
+
+.sean_music_home_search {
+    display: flex;
+    align-items: center;
+    min-width: 240px;
+    padding: 11px 15px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 999px;
+    background: rgba(7, 37, 85, .28);
+
+    i { color: #c9e0ff; }
+
+    input {
+        width: 100%;
+        margin-left: 10px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: #fff;
+
+        &::placeholder { color: rgba(255, 255, 255, .7); }
+    }
+}
+
+.sean_music_home_grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 34px 28px;
+}
+
+.sean_music_app {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 10px 4px;
+    border: 0;
+    border-radius: 14px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    flex-direction: column;
+    transition: transform .2s ease, background .2s ease;
+
+    &:hover, &:focus {
+        outline: 0;
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, .1);
+    }
+}
+
+.sean_music_app_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78px;
+    height: 78px;
+    border-radius: 9px;
+    background: var(--tile-color);
+    box-shadow: 0 12px 22px rgba(4, 26, 64, .22), inset 0 1px 0 rgba(255, 255, 255, .3);
+    font-size: 34px;
+}
+
+.sean_music_app_icon_image {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.sean_music_app_label {
+    width: 100%;
+    margin-top: 12px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    white-space: nowrap;
+}
+
+.sean_music_home_empty {
+    padding: 60px 0;
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+}
+
+.sean_music_home_footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 74px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .68);
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .sean_music_home_grid { grid-template-columns: repeat(4, minmax(90px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .sean_music_home_inner { width: 94%; padding-top: 34px; }
+    .sean_music_home_heading { align-items: stretch; flex-direction: column; margin-bottom: 26px; }
+    .sean_music_home_search { min-width: 0; }
+    .sean_music_home_grid { grid-template-columns: repeat(3, minmax(75px, 1fr)); gap: 20px 8px; }
+    .sean_music_app_icon { width: 62px; height: 62px; font-size: 26px; }
+    .sean_music_app_label { font-size: 12px; }
+    .sean_music_home_footer { flex-direction: column; gap: 8px; }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_sean_music_collaborator_root" name="Collaborators" parent="sale.menu_sale_config" sequence="50" groups="sean_music_collaborator.group_collaborator_user"/>
+    <menuitem id="menu_sean_music_collaborators" name="Collaborators" parent="menu_sean_music_collaborator_root" action="action_collaborator" sequence="10"/>
+    <menuitem id="menu_sean_music_commissions" name="Commissions" parent="menu_sean_music_collaborator_root" action="action_commission" sequence="20"/>
+    <menuitem id="menu_sean_music_commission_analysis" name="Commission Analysis" parent="menu_sean_music_collaborator_root" action="action_commission_analysis" sequence="30" groups="sean_music_collaborator.group_collaborator_manager"/>
+    <menuitem id="menu_sean_music_collaborator_config" name="Configuration" parent="menu_sean_music_collaborator_root" sequence="90" groups="sean_music_collaborator.group_collaborator_manager"/>
+    <menuitem id="menu_sean_music_commission_plans" name="Commission Plans" parent="menu_sean_music_collaborator_config" action="action_commission_plan" sequence="10"/>
+</odoo>
